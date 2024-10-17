@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 const fs = require("fs");
 const { allEmails } = require("../template/email");
+const { getTemplate } = require("../template/template");
 
 const EMAIL_LIST_PATH = "./emails.json";
 const SMTP_HOST = "server.cloudnest.cfd";
