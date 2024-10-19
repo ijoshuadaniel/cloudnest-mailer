@@ -44,7 +44,7 @@ function processXlsxFile(inputXlsxPath, outputJsonPath) {
   saveEmailsToJson(emailIDs, outputJsonPath);
 }
 
-const inputFilePath = path.join(__dirname, "compares.xlsx");
-const outputFilePath = path.join(__dirname, "compare.json");
+const inputFilePath = path.join(__dirname, "input.xlsx");
+const outputFilePath = path.join(__dirname, "emails.json");
 
 processXlsxFile(inputFilePath, outputFilePath);
