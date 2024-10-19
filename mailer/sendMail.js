@@ -10,9 +10,9 @@ const SMTP_USER = "promo@cloudnest.cfd";
 const SMTP_PASS = "Dan@6361";
 const SENDER_EMAIL = `"CloudNest" <promo@cloudnest.cfd>`;
 const SUBJECT = "Affordable Domains, Hosting, SSL & VPS";
-const BATCH_SIZE = 500;
-const EMAIL_INTERVAL = 2000; // 5 second
-const BATCH_WAIT_TIME = 30 * 60 * 1000; // 30 minutes
+const BATCH_SIZE = 1000;
+const EMAIL_INTERVAL = 500;
+const BATCH_WAIT_TIME = 5 * 60 * 1000; // 5 minutes
 
 const emailList = JSON.parse(fs.readFileSync(EMAIL_LIST_PATH, "utf-8"));
 

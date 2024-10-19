@@ -10,8 +10,8 @@ function extractEmailsFromXlsx(filePath) {
     const sheetData = XLSX.utils.sheet_to_json(worksheet);
 
     const emailIDs = sheetData
-      .filter((row) => row.EmailID)
-      .flatMap((row) => row.EmailID.split(","))
+      .filter((row) => row.Email)
+      .flatMap((row) => row.Email.split(","))
       .map((email) => email.trim())
       .filter((email) => email);
 
@@ -44,7 +44,7 @@ function processXlsxFile(inputXlsxPath, outputJsonPath) {
   saveEmailsToJson(emailIDs, outputJsonPath);
 }
 
-const inputFilePath = path.join(__dirname, "input.xlsx");
-const outputFilePath = path.join(__dirname, "emails.json");
+const inputFilePath = path.join(__dirname, "compares.xlsx");
+const outputFilePath = path.join(__dirname, "compare.json");
 
 processXlsxFile(inputFilePath, outputFilePath);
