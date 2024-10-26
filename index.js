@@ -18,7 +18,7 @@ function extractEmailsFromXlsx(filePath) {
     // Remove duplicates by converting to a Set and back to an array
     const uniqueEmails = [...new Set(emailIDs)];
 
-    return uniqueEmails;
+    return uniqueEmails.filter((f) => f !== "N/A");
   } catch (error) {
     console.error("Error extracting emails:", error);
     return [];
