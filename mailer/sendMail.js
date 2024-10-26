@@ -38,7 +38,7 @@ const sendEmailBatch = async (emails) => {
         subject: SUBJECT,
         html: getTemplate(allEmails.promo),
       });
-      console.log(`Email sent to: ${email}`, new Date().toISOString());
+      console.log(`Email sent to: ${email}`);
     } catch (error) {
       console.error(`Error sending email to ${email}:`, error);
     }
@@ -63,6 +63,7 @@ const sendEmails = async () => {
 sendEmails()
   .then(() => {
     console.log("All emails have been sent.");
+    console.log("Date:", new Date().toISOString());
   })
   .catch((error) => {
     console.error("Error sending emails:", error);
